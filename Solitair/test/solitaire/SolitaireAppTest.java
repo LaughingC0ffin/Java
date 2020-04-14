@@ -61,10 +61,11 @@ public class SolitaireAppTest {
         printed.reset();
         new SolitaireApp(commands("2 4 4 4 a 0 4 2 4 3 2 3 4"), printStream, board2).playSolitaire();
         final int count2 = count(printed.toString(), '\n');
-        Assert.assertEquals(count1, count1);
+        Assert.assertEquals(count1, count2);
     }
+    //count 1 und 2
 
-    @Test(timeout = 100)
+    @Test//(timeout = 100)
     public void testInvalidMove() {
         new SolitaireApp(commands("3 4 4 4"), printStream, board).playSolitaire();
         printed.reset();
