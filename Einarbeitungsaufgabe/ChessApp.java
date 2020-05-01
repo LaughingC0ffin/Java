@@ -15,12 +15,13 @@ public class ChessApp {
     public static void check(List<Piece> pieces, PrintStream out) {
         for (Piece p1 : pieces) {
             out.println(p1);
-            for (Piece p2 : pieces)
+            for (Piece p2 : pieces) {
                 if (p1 != p2)
                     if (p1.canCapture(p2, pieces))
                         out.println("   can capture " + p2);
                     else
                         out.println("   cannot capture " + p2);
+            }
         }
     }
 
